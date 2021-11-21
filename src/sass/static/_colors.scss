@@ -1,0 +1,57 @@
+// Main colors
+$flatWhite: #ffffff;
+$flatBlack: #1e263c;
+$flatRed: #ff071b;
+$flatGreen: #00ad21;
+$flatGold: #ffb12b;
+
+// Extra colors
+$veryLightGray: #fafafa;
+$flatGray: #8e8e8e;
+$boldGray: #8290a8;
+$borderColor: #ebebeb;
+
+
+// Main color classes
+.color-white {
+    color: $flatWhite;
+}
+
+.color-black {
+    color: $flatBlack;
+}
+
+.color-red {
+    color: $flatRed;
+}
+
+.color-green {
+    color: $flatGreen;
+}
+
+.color-gold {
+    color: $flatGold;
+}
+
+.bg-color-white {
+    background-color: $flatWhite;
+}
+
+.bg-color-black {
+    background-color: $flatBlack;
+}
+
+.bg-color-red {
+    background-color: $flatRed;
+}
+
+.bg-color-green {
+    background-color: $flatGreen;
+}
+
+.bg-color-gold {
+    background-color: $flatGold;
+}
+.bg-color-vl-gray {
+    background-color: $veryLightGray;
+}

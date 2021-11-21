@@ -1,0 +1,14 @@
+@use "../static";
+
+nav {
+  .brand-logo {
+    max-width: 12%;
+  }
+  a {
+    color: static.$flatBlack;
+    text-decoration: none;
+    &:hover {
+      color: static.$flatGray;
+    }
+  }
+}

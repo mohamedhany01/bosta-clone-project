@@ -1,0 +1,13 @@
+@use '../static';
+
+.track {
+    .info > div > div:first-of-type{
+        color: static.$flatGray;
+
+    }
+
+    .info > div > div:last-of-type{
+        font-weight: 700;
+        color: static.$flatBlack;
+    }
+}

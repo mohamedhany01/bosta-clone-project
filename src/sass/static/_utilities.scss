@@ -1,0 +1,39 @@
+@use "colors";
+
+$borderWidth: 1px;
+$borderRadius: 0.5rem;
+
+.border-custom-full {
+    border: $borderWidth solid colors.$borderColor;
+}
+
+.border-custom-start {
+    border-left: $borderWidth solid colors.$borderColor;
+}
+
+.border-custom-end {
+    border-right: $borderWidth solid colors.$borderColor;
+}
+
+.border-custom-top {
+    border-top: $borderWidth solid colors.$borderColor;
+}
+
+.border-custom-bottom {
+    border-bottom: $borderWidth solid colors.$borderColor;
+}
+
+
+.border-custom-rounded-full {
+    border-radius: $borderRadius;
+}
+
+.border-custom-rounded-top {
+    border-top-left-radius: $borderRadius;
+    border-top-right-radius: $borderRadius;
+}
+
+.border-custom-rounded-bottom {
+    border-bottom-left-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
+}
