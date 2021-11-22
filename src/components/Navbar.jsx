@@ -9,7 +9,7 @@ const Navbar = () => {
             <div className="brand-logo col-lg-4">
               <img src={logo} alt="Logo" className="img-fluid btn"/>
             </div>
-            <div className="nav col-lg-4">
+            <div className="nav col-lg-4 d-flex justify-content-center align-items-center">
               <ul className="list-unstyled p-0 m-0 d-flex flex-row-reverse justify-content-between align-items-center">
                 <li>
                   <a href="#">الرئيسية</a>

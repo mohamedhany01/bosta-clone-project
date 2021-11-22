@@ -1,0 +1,11 @@
+@use "../static";
+
+table th,
+table td {
+  padding: 1.5rem !important;
+}
+
+table thead tr,
+table tbody tr:not(:last-child) {
+  border-bottom: 1px solid static.$borderColor;
+}

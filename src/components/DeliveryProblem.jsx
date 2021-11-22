@@ -2,7 +2,7 @@ import sectionRightImg from "../images/undraw_questions_re_1fy7.svg";
 
 const DeliveryProblem = () => {
   return (
-    <section className="delivery-problem g-0 row p-3 flex-row-reverse justify-content-between align-items-center border-custom-full border-custom-rounded-full">
+    <section className="delivery-problem mb-lg-0 mb-5 g-0 row p-3 flex-row-reverse justify-content-between align-items-center border-custom-full border-custom-rounded-full">
       <div className="col-5">
         <img className="img-fluid" src={sectionRightImg} alt="Any problem" />
       </div>
