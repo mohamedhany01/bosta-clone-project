@@ -15,8 +15,16 @@ import DeliveryProblem from "./DeliveryProblem";
 const App = () => {
   return (
     <>
-      <Navbar />
-      <Track />
+      <nav className="fs-700 border-custom-bottom">
+        <div className="container">
+          <Navbar />
+        </div>
+      </nav>
+      <section className="track">
+        <div className="container">
+          <Track />
+        </div>
+      </section>
       <div className="container">
         <div className="row flex-row-reverse mt-5">
           <div className="g-0 col-lg-8">
