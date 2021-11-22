@@ -1,14 +1,110 @@
 @use "../static";
 
 nav {
-  .brand-logo {
-    max-width: 12%;
-  }
-  a {
-    color: static.$flatBlack;
-    text-decoration: none;
+  .icon-menu {
+    font-size: 2rem;
+    color: static.$flatRed;
+
     &:hover {
-      color: static.$flatGray;
+      color: static.$flatRed;
+    }
+  }
+  // a {
+  //   color: static.$flatBlack;
+  //   text-decoration: none;
+  //   &:hover {
+  //     color: static.$flatGray;
+  //   }
+  // }
+}
+
+nav .inner-nav {
+  position: relative;
+  // background-color: green; //Debug
+  padding-top: 2rem;
+
+  #dropdown-nav-menu {
+    position: absolute;
+    // background-color: greenyellow; //Debug
+    top: 100%;
+    padding: 0rem 2rem;
+    display: none;
+
+    .nav-items-container {
+      border-top: 3px solid static.$flatRed;
+      // background-color: aquamarine; //Debug
+
+      .input-id-container {
+        position: relative;
+        padding: 1rem;
+        background-color: static.$flatWhite;
+        display: none;
+        // pointer-events: none;
+      }
+
+      ul,
+      li {
+        width: 100%;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      li {
+        padding: 0.5rem 0rem;
+        background-color: static.$veryLightGray;
+      }
+
+      li.track-your-package {
+        position: relative;
+      }
+
+      li .icon-angle-up, li .icon-angle-down {
+        font-size: 1.2rem;
+        cursor: pointer;
+        position: absolute;
+        top: 31%;
+        left: 35%;
+        width: 1rem;
+        height: 1rem;
+        color: static.$flatRed;
+        cursor: pointer;
+      }
+
+      li.border-gray-bottom {
+        border-bottom: 1px solid static.$flatWhite;
+      }
+
+      li a {
+        color: static.$flatBlack;
+        text-decoration: none;
+      }
+
+      li a.lang {
+        color: static.$flatRed;
+        text-decoration: none;
+      }
+
+      input {
+        padding: 0rem 1rem;
+        border: 1px solid static.$borderColor;
+        direction: rtl;
+      }
+
+      input::placeholder {
+        text-align: right;
+      }
+
+      .icon-search {
+        background-color: static.$flatRed;
+        color: static.$flatWhite;
+        padding: 0.5rem;
+        border-radius: 50%;
+        cursor: pointer;
+      }
     }
   }
 }

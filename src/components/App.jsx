@@ -15,12 +15,12 @@ import DeliveryProblem from "./DeliveryProblem";
 const App = () => {
   return (
     <>
-      <nav className="fs-700 border-custom-bottom">
+      <nav className="fs-700 border-custom-bottom mtd-lg-0 mtd-4">
         <div className="container">
           <Navbar />
         </div>
       </nav>
-      <section className="track">
+      {/* <section className="track">
         <div className="container">
           <Track />
         </div>
@@ -35,7 +35,7 @@ const App = () => {
             <DeliveryProblem />
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
