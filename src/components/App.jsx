@@ -20,7 +20,7 @@ const App = () => {
           <Navbar />
         </div>
       </nav>
-      {/* <section className="track">
+      <section className="track">
         <div className="container">
           <Track />
         </div>
@@ -35,7 +35,7 @@ const App = () => {
             <DeliveryProblem />
           </div>
         </div>
-      </div> */}
+      </div>
     </>
   );
 };
