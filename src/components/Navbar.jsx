@@ -37,14 +37,14 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="inner-nav row flex-row-reverse justify-content-between align-items-center">
-        <div className="brand-logo col-lg-4 col-6">
+      <div className="inner-nav row">
+        <div className="brand-logo col-lg-2 col-6 d-flex justify-content-end align-items-center">
           <img src={logo} alt="Logo" className="img-fluid btn" />
         </div>
         {/* Dropdown nav menu */}
         <div id="dropdown-nav-menu">
-          <div className="nav-items-container d-flex flex-column justify-content-between align-items-center">
-            <ul className="list-unstyled d-flex flex-column justify-content-between align-items-center">
+          <div className="nav-items-container">
+            <ul className="list-unstyled">
               <li className="border-gray-bottom">
                 <a href="#">الرئيسية</a>
               </li>
@@ -55,9 +55,9 @@ const Navbar = () => {
                 <a href="#">كلم المبيعات</a>
               </li>
             </ul>
-            <ul className="list-unstyled d-flex flex-column justify-content-between align-items-center">
+            <ul className="list-unstyled">
               <li
-                className="track-your-package arrow-down d-flex flex-column justify-content-between align-items-center border-gray-bottom"
+                className="track-your-package arrow-down border-gray-bottom"
               >
                 <div id="arrow-fix" className="arrow-down">
                 <span onClick={showInputField} className="icon-angle-down"></span>
@@ -65,7 +65,7 @@ const Navbar = () => {
                 <a href="#">تتبع شحنتك</a>
                 <section
                   id="input-con"
-                  className="input-id-container flex-column justify-content-between align-items-center"
+                  className="input-id-container"
                 >
                   <p>اكتب رقم الشحنة وتابع شحنتك خطوة بخطوة</p>
                   <div className="input-id d-flex justify-content-center align-items-center">

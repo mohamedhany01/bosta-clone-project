@@ -22,6 +22,10 @@ nav .inner-nav {
   position: relative;
   // background-color: green; //Debug
   padding-top: 2rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
 
   #dropdown-nav-menu {
     position: absolute;
@@ -31,15 +35,22 @@ nav .inner-nav {
     display: none;
 
     .nav-items-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
       border-top: 3px solid static.$flatRed;
       // background-color: aquamarine; //Debug
 
       .input-id-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
         position: relative;
         padding: 1rem;
         background-color: static.$flatWhite;
         display: none;
-        // pointer-events: none;
       }
 
       ul,
@@ -51,6 +62,10 @@ nav .inner-nav {
         margin: 0;
         padding: 0;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
       }
 
       li {
@@ -59,10 +74,16 @@ nav .inner-nav {
       }
 
       li.track-your-package {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
         position: relative;
       }
 
-      li .icon-angle-up, li .icon-angle-down {
+      li .icon-angle-up,
+      li .icon-angle-down {
         font-size: 1.2rem;
         cursor: pointer;
         position: absolute;
@@ -104,6 +125,132 @@ nav .inner-nav {
         padding: 0.5rem;
         border-radius: 50%;
         cursor: pointer;
+      }
+    }
+  }
+}
+
+// Media in large screen <= 992
+@media (min-width: 992px) {
+  nav .inner-nav {
+    position: relative;
+    // background-color: green; //Debug
+    padding-top: 0rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+
+    #dropdown-nav-menu {
+      position: static;
+      padding: 0rem;
+      display: block;
+      width: 66.66666666%;
+
+      .nav-items-container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        border-top: none;
+        // background-color: aquamarine; //Debug
+
+        .input-id-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          position: absolute;
+          top: 190%;
+          padding: 1rem;
+          background-color: static.$flatWhite;
+          display: none;
+        }
+
+        ul,
+        li {
+          width: 100%;
+        }
+
+        ul {
+          margin: 0;
+          padding: 0;
+          text-align: center;
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        li {
+          padding: 0rem;
+          background-color: transparent;
+        }
+
+        li.track-your-package {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          position: relative;
+        }
+
+        li.track-your-package::after {
+          height: 14px;
+          width: 1px;
+          background: static.$flatRed;
+          display: inline-block;
+          position: absolute;
+          top: 5px;
+          content: "";
+          left: 0%;
+        }
+
+        li .icon-angle-up,
+        li .icon-angle-down {
+          font-size: 1.2rem;
+          cursor: pointer;
+          position: absolute;
+          top: 25%;
+          left: 10%;
+          width: 1rem;
+          height: 1rem;
+          color: static.$flatRed;
+          cursor: pointer;
+        }
+
+        li.border-gray-bottom {
+          border-bottom: 1px solid static.$flatWhite;
+        }
+
+        li a {
+          color: static.$flatBlack;
+          text-decoration: none;
+        }
+
+        li a.lang {
+          color: static.$flatRed;
+          text-decoration: none;
+        }
+
+        input {
+          padding: 0rem 1rem;
+          border: 1px solid static.$borderColor;
+          direction: rtl;
+        }
+
+        input::placeholder {
+          text-align: right;
+        }
+
+        .icon-search {
+          background-color: static.$flatRed;
+          color: static.$flatWhite;
+          padding: 0.5rem;
+          border-radius: 50%;
+          cursor: pointer;
+        }
       }
     }
   }
