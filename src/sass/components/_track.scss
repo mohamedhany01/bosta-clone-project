@@ -1,13 +1,210 @@
-@use '../static';
+@use "../static";
 
 .track {
-    .info > div > div:first-of-type{
-        color: static.$flatGray;
+  .info > div > div:first-of-type {
+    color: static.$flatGray;
+  }
 
-    }
+  .info > div > div:last-of-type {
+    font-weight: 700;
+    color: static.$flatBlack;
+  }
 
-    .info > div > div:last-of-type{
+  .progress-step-container.ideal {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: center;
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        padding: 1rem;
+        border-radius: 50%;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .progress-title {
         font-weight: 700;
-        color: static.$flatBlack;
+      }
     }
+
+    .dash-between {
+      width: 20%;
+      height: 5px;
+      background-color: static.$flatBlack;
+    }
+  }
+  
+  .progress-step-container.success {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: center;
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        background-color: static.$flatGreen;
+        color: static.$flatWhite;
+        padding: 1rem;
+        border-radius: 50%;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .progress-title {
+        font-weight: 700;
+      }
+    }
+
+    .dash-between {
+      width: 20%;
+      height: 5px;
+      background-color: static.$flatGreen;
+    }
+  }
+
+  .progress-step-container.failed {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: center;
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        background-color: static.$flatRed;
+        color: static.$flatWhite;
+        padding: 1rem;
+        border-radius: 50%;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .progress-title {
+        font-weight: 700;
+      }
+    }
+
+    .dash-between {
+      width: 20%;
+      height: 5px;
+      background-color: static.$flatRed;
+    }
+
+    .note {
+      color: static.$flatRed;
+      font-weight: 400;
+    }
+  }
+
+  .progress-step-container.canceled {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: center;
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        background-color: static.$flatGold;
+        color: static.$flatWhite;
+        padding: 1rem;
+        border-radius: 50%;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .progress-title {
+        font-weight: 700;
+      }
+    }
+
+    .dash-between {
+      width: 20%;
+      height: 5px;
+      background-color: static.$flatGold;
+    }
+
+    .note {
+      color: static.$flatGold;
+      font-weight: 400;
+    }
+  }
 }
+
+
+ // span {
+    //   color: static.$flatGreen;
+    //   position: relative;
+    //   background: #fff;
+    // }
+
+    // span::after {
+    //   content: "";
+    //   width: 23rem;
+    //   height: 5px;
+    //   background-color: static.$flatGreen;
+    //   position: absolute;
+    //   right: 0;
+    //   top: 6px;
+    //   z-index: -1;
+    // }
+
+    // li:nth-child(3) span::after {
+    //     background-color: blue ;
+    // }
+
+    // li:last-child span::after {
+    //     width: 0rem;
+    // }
+
+    // // Unique status
+    // span.out, span.done {
+    //   color: static.$flatWhite;
+    //   background-color: static.$flatRed;
+    //   padding: 1rem;
+    //   border-radius: 50%;
+    //   font-size: 1.5rem;
+    // }
+
+    // span.out::after {
+    //     width: 20rem;
+    //     right: 0;
+    //   top: 12px;
+    //   background-color: orchid !important;
+    // }
+
+    // .progress-title {
+    //   margin-top: 1.5rem;
+    // }

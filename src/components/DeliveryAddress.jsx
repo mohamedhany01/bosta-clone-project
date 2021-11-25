@@ -1,4 +1,4 @@
-const DeliveryAddress = () => {
+const DeliveryAddress = ({data}) => {
   return (
     <section className="delivery-address text-start mb-lg-0 mb-5">
       <header>عنوان التسليم</header>

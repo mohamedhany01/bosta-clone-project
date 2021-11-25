@@ -1,20 +1,39 @@
+import { useState } from "react";
 import logo from "../images/bosta-logo.svg";
 
-const Navbar = () => {
-  function showInputField(e) {
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 
+// Axios
+import axios from "axios";
+
+const Navbar = ({dataHandler}) => {
+  // // Store the delivery code from user
+  const [deliveryCode, setDeliveryCode] = useState(6636234);
+
+  // Request data
+  async function getAPIData() {
+    await axios
+      .get(`https://tracking.bosta.co/shipments/track/${deliveryCode}`)
+      .then((res) => {
+        // Send data to the parent component "App"
+        dataHandler(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  function showInputField(e) {
     const targetToChange = e.target;
 
     const inputContainer = document.getElementById("input-con");
 
-    if (
-      targetToChange.classList.contains("icon-angle-down") 
-    ) {
+    if (targetToChange.classList.contains("icon-angle-down")) {
       targetToChange.classList.remove("icon-angle-down");
       targetToChange.classList.add("icon-angle-up");
       targetToChange.style.top = "7%";
       inputContainer.style.display = "flex";
-      
     } else {
       targetToChange.classList.remove("icon-angle-up");
       targetToChange.classList.add("icon-angle-down");
@@ -23,7 +42,7 @@ const Navbar = () => {
     }
   }
 
-  function showDropdownNavMenu(e) {
+  function showDropdownNavMenu() {
     const dropMenu = document.getElementById("dropdown-nav-menu");
 
     if (dropMenu.classList.contains("drop-menu-show")) {
@@ -56,21 +75,32 @@ const Navbar = () => {
               </li>
             </ul>
             <ul className="list-unstyled">
-              <li
-                className="track-your-package arrow-down border-gray-bottom"
-              >
+              <li className="track-your-package arrow-down border-gray-bottom">
                 <div id="arrow-fix" className="arrow-down">
-                <span onClick={showInputField} className="icon-angle-down"></span>
+                  <span
+                    onClick={showInputField}
+                    className="icon-angle-down"
+                  ></span>
                 </div>
                 <a href="#">تتبع شحنتك</a>
-                <section
-                  id="input-con"
-                  className="input-id-container"
-                >
+                <section id="input-con" className="input-id-container">
                   <p>اكتب رقم الشحنة وتابع شحنتك خطوة بخطوة</p>
                   <div className="input-id d-flex justify-content-center align-items-center">
-                    <span className="icon-search ms-3"></span>
-                    <input type="text" name="pak-ig" placeholder="رقم الشحنة" />
+                    <span
+                      className="icon-search ms-3"
+                      onClick={() => {
+                        getAPIData();
+                      }}
+                    ></span>
+                    <input
+                      type="text"
+                      name="pak-ig"
+                      placeholder="رقم الشحنة"
+                      value={deliveryCode}
+                      onChange={(e) => {
+                        setDeliveryCode(e.target.value);
+                      }}
+                    />
                   </div>
                 </section>
               </li>
@@ -94,42 +124,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-{
-  /* <div className="inner-nav py-2 row flex-row-reverse justify-content-between align-items-center">
-  <div className="brand-logo col-lg-4 col-6">
-    <img src={logo} alt="Logo" className="img-fluid btn" />
-  </div>
-  <div className="burger-btn d-lg-none d-flex col-6">
-    <span class="icon-menu btn"></span>
-  </div>
-  <div className="nav col-lg-4 d-flex justify-content-center align-items-center d-none d-lg-flex">
-    <ul className="list-unstyled p-0 m-0 d-flex flex-row-reverse justify-content-between align-items-center">
-      <li>
-        <a href="#">الرئيسية</a>
-      </li>
-      <li className="mx-5">
-        <a href="#">الأسعار</a>
-      </li>
-      <li>
-        <a href="#">كلم المبيعات</a>
-      </li>
-    </ul>
-  </div>
-  <div className="nav-services col-lg-4 d-none d-lg-flex">
-    <ul className="list-unstyled p-0 m-0 d-flex flex-row-reverse justify-content-between align-items-center">
-      <li>
-        <a href="#">تتبع شحنتك</a>
-      </li>
-      <li className="mx-5">
-        <a href="#">تسجيل الدخول</a>
-      </li>
-      <li className="lang">
-        <a href="#" className="color-red">
-          ENG
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>; */
-}
