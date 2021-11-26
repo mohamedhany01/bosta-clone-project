@@ -9,7 +9,7 @@ import axios from "axios";
 
 const Navbar = ({dataHandler}) => {
   // Store the delivery code from user
-  const [deliveryCode, setDeliveryCode] = useState(6636234);
+  const [deliveryCode, setDeliveryCode] = useState("");
 
   // Request data
   async function getAPIData() {
