@@ -41,7 +41,7 @@ const App = () => {
         </div>
       </section>
       <div className="container">
-        <div className="row flex-row-reverse mt-5">
+        <div className="row flex-row-reverse my-5">
           <div className="g-0 col-lg-8">
             <DeliveryDetails data={APIData} />
           </div>

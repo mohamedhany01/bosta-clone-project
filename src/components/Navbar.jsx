@@ -8,7 +8,7 @@ import "regenerator-runtime/runtime";
 import axios from "axios";
 
 const Navbar = ({dataHandler}) => {
-  // // Store the delivery code from user
+  // Store the delivery code from user
   const [deliveryCode, setDeliveryCode] = useState(6636234);
 
   // Request data

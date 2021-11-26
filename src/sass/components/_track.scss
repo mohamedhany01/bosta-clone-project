@@ -10,6 +10,16 @@
     color: static.$flatBlack;
   }
 
+  .d-status.success {
+    color: static.$flatGreen !important;
+  }
+  .d-status.failed {
+    color: static.$flatRed !important;
+  }
+  .d-status.canceled {
+    color: static.$flatGold !important;
+  }
+
   .progress-step-container.ideal {
     display: flex;
     justify-content: space-between;
@@ -35,6 +45,14 @@
       .progress-title {
         font-weight: 700;
       }
+
+      .show {
+        display: block !important;
+      }
+
+      .hidden {
+        display: hidden !important;
+      }
     }
 
     .dash-between {
@@ -43,7 +61,7 @@
       background-color: static.$flatBlack;
     }
   }
-  
+
   .progress-step-container.success {
     display: flex;
     justify-content: space-between;
@@ -71,6 +89,14 @@
       .progress-title {
         font-weight: 700;
       }
+
+      .show {
+        display: block !important;
+      }
+
+      .hidden {
+        display: hidden !important;
+      }
     }
 
     .dash-between {
@@ -93,6 +119,7 @@
       justify-content: center;
       align-items: center;
 
+
       span {
         background-color: static.$flatRed;
         color: static.$flatWhite;
@@ -107,8 +134,16 @@
       .progress-title {
         font-weight: 700;
       }
-    }
 
+      .show {
+        display: none !important;
+      }
+
+      .hidden {
+        display: block !important;
+      }
+    }
+    
     .dash-between {
       width: 20%;
       height: 5px;
@@ -148,6 +183,14 @@
       .progress-title {
         font-weight: 700;
       }
+
+      .show {
+        display: none !important;
+      }
+
+      .hidden {
+        display: block !important;
+      }
     }
 
     .dash-between {
@@ -162,49 +205,3 @@
     }
   }
 }
-
-
- // span {
-    //   color: static.$flatGreen;
-    //   position: relative;
-    //   background: #fff;
-    // }
-
-    // span::after {
-    //   content: "";
-    //   width: 23rem;
-    //   height: 5px;
-    //   background-color: static.$flatGreen;
-    //   position: absolute;
-    //   right: 0;
-    //   top: 6px;
-    //   z-index: -1;
-    // }
-
-    // li:nth-child(3) span::after {
-    //     background-color: blue ;
-    // }
-
-    // li:last-child span::after {
-    //     width: 0rem;
-    // }
-
-    // // Unique status
-    // span.out, span.done {
-    //   color: static.$flatWhite;
-    //   background-color: static.$flatRed;
-    //   padding: 1rem;
-    //   border-radius: 50%;
-    //   font-size: 1.5rem;
-    // }
-
-    // span.out::after {
-    //     width: 20rem;
-    //     right: 0;
-    //   top: 12px;
-    //   background-color: orchid !important;
-    // }
-
-    // .progress-title {
-    //   margin-top: 1.5rem;
-    // }

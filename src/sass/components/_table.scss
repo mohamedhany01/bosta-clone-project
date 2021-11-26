@@ -9,3 +9,22 @@ table thead tr,
 table tbody tr:not(:last-child) {
   border-bottom: 1px solid static.$borderColor;
 }
+
+// Display rtl
+table tr {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
+
+table .reason.success {
+  color: static.$flatGreen;
+}
+
+table .reason.canceled {
+  color: static.$flatGold;;
+}
+
+table .reason.failed {
+  color: static.$flatGreen;
+}
